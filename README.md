@@ -1,2 +1,2 @@
-# functions_for_package
-Repo for a prospective package
+# Functions for prospective package
+Code for a package that I am planning to create.
