@@ -4,7 +4,8 @@ describe <- function(data_frame){
     `Variable name` = colnames(data_frame),
     `Variable type` = sapply(data_frame, class),
     `Unique values` = unname(sapply(data_frame, function(i)length(unique(i)))),
-    `Total Missing` = unname(sapply(data_frame, function(i)sum(is.na(i))))
+    `Total Missing` = unname(sapply(data_frame, function(i)sum(is.na(i)))),
+    `% Missing` = unname(sapply(data_frame, function(i)sum(is.na(i))))/nrow(data_frame)
   )
   
  return(x) 
