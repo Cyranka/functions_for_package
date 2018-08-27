@@ -1,3 +1,13 @@
+#' Describe function
+#'
+#' Inspired by a function with the same name in STATA, it quickly displays information about variables
+#' @param data_frame.  A basic data frame or tibble
+#' @keywords describe
+#' @export
+#' @examples
+#' describe(mtcars)
+
+
 describe <- function(data_frame){
   require(dplyr)
   x <- tibble(
