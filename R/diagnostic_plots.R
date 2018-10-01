@@ -1,6 +1,6 @@
 #' Cumulative Table
 #'
-#' A function to quickly create cumulative tables
+#' A function that produces ggplot equivalents of regression diagnostic plots
 #' @model A linear model, class "lm"
 #' @keywords Diagnostic plots
 #' @export
