@@ -1,3 +1,13 @@
+#' Cumulative Table
+#'
+#' A function to quickly create cumulative tables
+#' @model A linear model, class "lm"
+#' @keywords Diagnostic plots
+#' @export
+#' @examples
+#' lm_diagnostic_plots(fit_1), where fit_1 = lm(y~..., data = df)
+
+
 lm_diagnostic_plots <- function(model){
   library(tidyverse);library(MASS)
   
