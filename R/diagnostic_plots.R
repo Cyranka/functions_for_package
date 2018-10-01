@@ -1,11 +1,11 @@
-#' Cumulative Table
+#' Linear regression diagnostic plots
 #'
-#' A function that produces ggplot equivalents of regression diagnostic plots
+#' A function that produces ggplot equivalents of regression diagnostic plots. Works only when response is quantitative
 #' @model A linear model, class "lm"
 #' @keywords Diagnostic plots
 #' @export
 #' @examples
-#' lm_diagnostic_plots(fit_1), where fit_1 = lm(y~..., data = df)
+#' lm_diagnostic_plots(fit_1), where fit_1 = lm(y~..., data = ...)
 
 
 lm_diagnostic_plots <- function(model){
