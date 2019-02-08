@@ -1,11 +1,11 @@
 rm(list =ls())
 library(rvest)
 
-url <- paste0("https://www.tripadvisor.com/Hotel_Review-g60763-d611947-Reviews-or",5:20,"-New_York_Hilton_Midtown-New_York_City_New_York.html")
+url <- paste0("https://www.tripadvisor.com/Hotel_Review-g60763-d611947-Reviews-or",seq(5,50,by = 5),"-New_York_Hilton_Midtown-New_York_City_New_York.html")
 
 retrieve_hrefs <- function(my_url){
     print(my_url)
-    Sys.sleep(2)
+    #Sys.sleep(2)
     return(reviews <- my_url %>%
         read_html() %>%html_nodes("a") %>%
         html_attr("href"))
@@ -14,7 +14,7 @@ retrieve_hrefs <- function(my_url){
 
 p <- lapply(url, function(i)retrieve_hrefs(i))
 l <- unlist(p) %>% stringr::str_subset("/ShowUserReviews")
-l <- paste0("https://www.tripadvisor.com/", l)
+l <- paste0("https://www.tripadvisor.com/", l) %>% unique()
 
 ##Grabs full text
 
